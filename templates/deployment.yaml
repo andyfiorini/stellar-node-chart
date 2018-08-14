@@ -45,6 +45,8 @@ spec:
             - name: "CATCHUP_COMPLETE"
               value: "true"
           volumeMounts:
+          - name: runvol
+            mountPath: /run
           - name: pv0001
             mountPath: /opt/stellar
             {{- if .Values.persistence.subPath }}
@@ -78,6 +80,8 @@ spec:
 {{ toYaml . | indent 8 }}
     {{- end }}
       volumes:
+      - name: runvol
+        emptyDir: {}
       - name: pv0001
       {{- if .Values.persistence.enabled }}
         persistentVolumeClaim:

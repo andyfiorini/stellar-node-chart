@@ -12,7 +12,7 @@ initimage:
 image:
   repository: agf234/run-stellar-node
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   type: ClusterIP
