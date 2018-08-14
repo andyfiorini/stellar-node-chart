@@ -38,6 +38,7 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["/init", "--", "/start", "--pubnet", "","" ]
           env: 
 #            - name: "PAGE_SIZE"
 #              value: "true"
