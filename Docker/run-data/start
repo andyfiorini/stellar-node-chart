@@ -331,7 +331,7 @@ function stop_postgres() {
 }
 
 
-#create_temp_dir;
+create_temp_dir;
 set_perms;
 
 				

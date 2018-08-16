@@ -7,7 +7,7 @@ replicaCount: 1
 initimage:
   repository: agf234/init-stellar-node
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 image:
   repository: agf234/run-stellar-node
